@@ -1,4 +1,6 @@
 import { expect } from "@playwright/test";
+import { env } from "../env";
+
 
 export class LoginPage {
 
@@ -13,8 +15,8 @@ export class LoginPage {
      }
 
      async openURL(){
-        await this.page.goto('https://practicetestautomation.com/practice-test-login/')
-
+        // await this.page.goto('https://practicetestautomation.com/practice-test-login/')
+       await this.page.goto(env.BASE_URL);
      }
 
      async login(username,password){
